@@ -16,7 +16,7 @@
 	<?php
 		$servername = "localhost";
 		$username = "root";
-		$password = "";
+		$password = "Ngocngo123";
 		$dbname = "lotus";
 
 		// Create connection
