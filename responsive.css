@@ -1,0 +1,319 @@
+
+@media screen and (max-width: 1280px) {
+
+    .input-search {
+        font-size: 18px;
+    }
+    .l-main-top {
+        width: 50%;
+        float: left;
+    }
+    .link-kw-pop {font-size: 16px;}
+    .r-main-top {
+        width: 50%;
+        float: left;
+    }
+    .input-search {
+        font-size: 18px;
+    }
+    .link-last-mobile, .ft-mobile {
+        display: none!important;
+    }
+}
+@media screen and (max-width: 992px) {
+    .txt-h3-top {
+        font-size: 30px;
+        line-height: 36px;
+    }
+    .txt-h5-top {
+        font-size: 20px;
+        line-height: 22px;
+    }
+    .link-kw-pop {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+    .container{min-width: 100%;}
+    #regmodal .modal-dialog {
+        margin: 90px auto 0;
+    }
+    .box-head{width: 100%;height: 60px;}
+    .row-head .navbar{
+        float: left;
+        padding: 0px;
+        margin-top: 10px;
+        position: absolute;
+        top: 5px;
+        left: 0px;
+        width: 100%;
+    }
+    .row-head .navbar-toggler {
+        padding:0px 5px;
+        margin-left: 15px;
+    }
+
+    .navbar-collapse{
+        z-index: 100;
+        background: #FFFFFF;
+        padding-top: 20px;
+    }
+    .link-logo-top{margin-left: 60px;}
+    .sum-ft-lotus{padding-right: 10px;line-height: 18px;}
+    .pw-bizfly-prdt-vcc {
+        float: right;
+        margin: auto;
+        display: table;
+    }
+    .row-footer .logo-lotus-ft {
+        margin-right: 20px;
+        width: 120px;
+        float: left;
+        margin-top: 17px;
+    }
+    .col-logo{
+        width: 100%;
+        max-width: 310px;
+        margin: 20px auto 0;
+        float: none;
+
+    }
+    .pw-bizfly-prdt-vcc {
+        padding: 10px;
+        display: table;
+    }
+    #regmodal .modal-dialog {
+        margin: 90px auto 0;
+    }
+    .box-head{width: 100%;height: 60px;}
+    .pw-bizfly-prdt-vcc {
+        float: right;
+        margin: auto;
+        display: table;
+    }
+    .col-logo{
+        width: 100%;
+        max-width: 310px;
+        margin: 20px auto 0;
+        float: none;
+    }
+    .pw-bizfly-prdt-vcc {
+        padding: 10px;
+        display: table;
+    }
+    .modal-content .reg-input {max-width: 100%;}
+}
+@media screen and (max-width: 767px) {
+    .l-main-top {
+        width: 100%;
+        float: left;
+    }
+    .txt-h5-top {margin-bottom: 20px;}
+    .box-search-top{
+        width: 100%;
+        top: 0px;
+        left: 0px;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    .r-main-top {
+        width: 100%;
+        float: left;
+        text-align: center;
+        padding-top: 20px;
+    }
+    .link-qs {margin-bottom: 10px;}
+    .link-kw-pop {
+        font-size: 14px;
+        padding: 8px 20px;
+        white-space: inherit;
+        line-height: 20px;
+
+    }
+    .link-qs {
+        font-family: SFT-Regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 20px;
+        margin-bottom: 0px;
+        color: #333333;
+        float: left;
+        width: 100%;
+        padding: 15px 20px 15px 0px;
+        clear: both;
+        text-decoration: none;
+        border-bottom: 1px solid #f0f0f0;
+        background: transparent url('images/arrow.png') no-repeat center right;
+    }
+    #regmodal .modal-dialog1{
+        max-width: 530px !important;
+        width: 100%;
+    }
+    .row-head .navbar{
+        float: left;
+        padding: 0px;
+        margin-top: 10px;
+        position: absolute;
+        top: 5px;
+        left: 0px;
+        width: 100%;
+    }
+    .row-head .navbar-toggler {
+        padding:0px 5px;
+        margin-left: 15px;
+    }
+
+    .navbar-collapse{
+        z-index: 100;
+        background: #FFFFFF;
+        padding-top: 20px;
+    }
+    .row-head .navbar-light .navbar-nav .nav-link{color:#333333;padding: 10px 15px;}
+    .row-head .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link{color: rgb(191, 30, 46);}
+    .link-logo-top{
+        margin-left: 60px;
+    }
+    .reg-content img{display: none;}
+    .reg-info {
+        width: 100%;
+    }
+    .sum-ft-lotus {
+        padding-right: 0px;
+        display: flex;
+    }
+
+    .row-pw {
+        border-top: 1px solid #f1f1f1;
+        padding-top: 20px;
+        margin-top: 15px;
+    }
+    .col-logo{
+        width: 100%;
+        max-width: 310px;
+        float: none;
+    }
+    .pw-bizfly-prdt-vcc {
+        display: table;
+    }
+
+    .txt-content {
+        line-height: 20px;
+        font-size: 14px;
+        padding: 0px 0px
+    }
+
+    .title-box-ct {
+        margin-top: 0px;
+    }
+
+    .line-bg {
+        margin-bottom: 35px;
+    }
+    .mobile, .link-last-mobile {
+        display: block
+    }
+    .ft-mobile {
+        display: flex;
+    }
+    .pc, .link-last {
+        display: none!important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .link-logo-top-l{display: none}
+    .link-logo-top-r{display: block;}
+    #regmodal .modal-dialog1{
+        max-width: 530px !important;
+        width: 100%;
+    }
+    .reg-content img{display: none;}
+    .reg-info {
+        width: 100%;
+    }
+    .sum-ft-lotus {
+        padding-right: 0px;
+    }
+    .row-pw {
+        border-top: 1px solid #f1f1f1;
+        padding-top: 20px;
+        margin-top: 15px;
+    }
+    .col-logo{
+        width: 100%;
+        max-width: 310px;
+        float: none;
+    }
+    .pw-bizfly-prdt-vcc {
+        display: table;
+    }
+
+    .txt-content {
+        line-height: 20px;
+        font-size: 14px;
+        padding: 0px 0px
+    }
+
+    .title-box-ct {
+        margin-top: 0px;
+    }
+
+    .line-bg {
+        margin-bottom: 35px;
+    }
+    .link-last-mobile {
+        display: block!important;
+    }
+    .link-last, .menu-link{
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #regmodal .modal-dialog1{
+        max-width: 310px !important;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 375px) {
+
+}
+
+@media screen and (max-width: 320px) {
+    .pw-bizfly-prdt-vcc1 {
+        float: left;
+        padding: 15px 10px;
+    }
+    .col-logo{margin-top: 0px;}
+    .pw-bizfly-prdt-vcc1 {
+        float: left;
+        padding: 15px 10px;
+    }
+    .col-logo{margin-top: 0px;}
+    .row-head .navbar-toggler {
+        padding: 0px 5px;
+        margin-left: 10px;
+    }
+    .link-logo-top {
+        margin-left: 45px;
+    }
+    .btn-register {
+        font-size: 12px;
+        font-family: "Roboto";
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        line-height: 38px;
+        text-align: center;
+        float: right;
+        margin-top: 12px;
+        border-radius: 18px;
+        background-color: rgb(228, 23, 55);
+        width: 125px;
+        height: 36px;
+        font-weight: 500;
+        z-index: 500;
+        position: relative;
+        border: none;
+        margin-right: -5px;
+    }
+}
