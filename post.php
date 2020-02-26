@@ -14,36 +14,20 @@
 </head>
 <body>
 	<?php
-    $servername = "localhost";
-    $username = "xudienloan";
-    $password = "ngocngo123";
-    $dbname = "lotus";
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
+	$dbname = "lotus";
 
-<<<<<<< HEAD
 		// Create connection
-		$conn = new mysqli($servername, $username, $password, $dbname);
+	$conn = new mysqli($servername, $username, $password, $dbname);
 		// Check connection
-		if ($conn->connect_error) {
-		    die("Connection failed: " . $conn->connect_error);
-		}else{
-		    mysqli_set_charset($conn, 'UTF8');
-		}
-		
-		$sql = "SELECT * from question where parent_id = 0";
-		$result = $conn->query($sql);
-=======
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }else{
-        mysqli_set_charset($conn,"UTF8");
-    }
+	if ($conn->connect_error) {
+		die("Connection failed: " . $conn->connect_error);
+	}
 	
 	$sql = "SELECT * from question where parent_id = 0";
 	$result = $conn->query($sql);
->>>>>>> 49958cd65ce7718a8302b305fbe3c53e234a602b
 
 	
 	?>
@@ -55,11 +39,7 @@
 					<div class="row">
 						<div class="col-lg-12">
 							<div class="row-head">
-<<<<<<< HEAD
-								<a href="/" class="link-logo-top link-logo-top-l">
-=======
 								<a href="https://lotus.vn/portal" class="link-logo-top link-logo-top-l">
->>>>>>> 49958cd65ce7718a8302b305fbe3c53e234a602b
 									<img src="images/logo.png" class="logo-lotus">
 								</a>
 								<nav class="navbar navbar-expand-lg navbar-light ">
