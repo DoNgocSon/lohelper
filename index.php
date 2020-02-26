@@ -23,23 +23,6 @@
 		// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);
 		// Check connection
-<<<<<<< HEAD:index.php
-		if ($conn->connect_error) {
-		    die("Connection failed: " . $conn->connect_error);
-		}else{
-		    mysqli_set_charset($conn, 'UTF8');
-		}
-		
-		$sql = "SELECT * from question where parent_id = 0";
-		$result = $conn->query($sql);
-
-		$parent = [];
-		$child = [];
-		while($row = $result->fetch_assoc()) {
-			$parent[] = $row;
-		}
-		
-=======
 	if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);
 	}else{
@@ -55,7 +38,6 @@
 		$parent[] = $row;
 	}
 	
->>>>>>> 49958cd65ce7718a8302b305fbe3c53e234a602b:home.php
 	?>
 	<main>
 		<div class="wrapper">
