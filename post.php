@@ -14,11 +14,12 @@
 </head>
 <body>
 	<?php
-		$servername = "localhost";
-		$username = "xudienloan";
-		$password = "ngocngo123";
-		$dbname = "lotus";
+    $servername = "localhost";
+    $username = "xudienloan";
+    $password = "ngocngo123";
+    $dbname = "lotus";
 
+<<<<<<< HEAD
 		// Create connection
 		$conn = new mysqli($servername, $username, $password, $dbname);
 		// Check connection
@@ -30,8 +31,21 @@
 		
 		$sql = "SELECT * from question where parent_id = 0";
 		$result = $conn->query($sql);
+=======
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }else{
+        mysqli_set_charset($conn,"UTF8");
+    }
+	
+	$sql = "SELECT * from question where parent_id = 0";
+	$result = $conn->query($sql);
+>>>>>>> 49958cd65ce7718a8302b305fbe3c53e234a602b
 
-			
+	
 	?>
 	<main>
 		<div class="wrapper">
@@ -41,7 +55,11 @@
 					<div class="row">
 						<div class="col-lg-12">
 							<div class="row-head">
+<<<<<<< HEAD
 								<a href="/" class="link-logo-top link-logo-top-l">
+=======
+								<a href="https://lotus.vn/portal" class="link-logo-top link-logo-top-l">
+>>>>>>> 49958cd65ce7718a8302b305fbe3c53e234a602b
 									<img src="images/logo.png" class="logo-lotus">
 								</a>
 								<nav class="navbar navbar-expand-lg navbar-light ">
@@ -52,26 +70,26 @@
 									<div class="collapse navbar-collapse navbar-collapse-mn" id="navbarNavDropdown">
 										<ul class="navbar-nav">
 											<li class="nav-item">
-												<a class="nav-link " href="/portal/creators.html">Nhà sáng tạo
+												<a class="nav-link " href="https://lotus.vn/portal/creators.html">Nhà sáng tạo
 												nội dung</a>
 											</li>
 											<li class="nav-item">
-												<a class="nav-link " href="/portal/chinh-luan.html">Nguồn chính luận</a>
+												<a class="nav-link " href="https://lotus.vn/portal/chinh-luan.html">Nguồn chính luận</a>
 											</li>
 											<li class="nav-item">
-												<a class="nav-link " href="/portal/community.html">Nhóm cộng đồng</a>
+												<a class="nav-link " href="https://lotus.vn/portal/community.html">Nhóm cộng đồng</a>
 											</li>
 											<li class="nav-item">
-												<a class="nav-link " href="/portal/developer.html">Developers</a>
+												<a class="nav-link " href="https://lotus.vn/portal/developer.html">Developers</a>
 											</li>
 											<li class="nav-item">
-												<a class="nav-link " href="/tuyen-dung.html">Tuyển dụng</a>
+												<a class="nav-link " href="https://lotus.vn/tuyen-dung.html">Tuyển dụng</a>
 											</li>
 											<li class="nav-item">
-												<a class="nav-link " href="/portal/quy-dinh-cung-cap-va-su-dung.html">Quy định</a>
+												<a class="nav-link " href="https://lotus.vn/portal/quy-dinh-cung-cap-va-su-dung.html">Quy định</a>
 											</li>
 											<li class="nav-item">
-												<a class="nav-link " href="/portal/dieu-khoan-token.html">Điều khoản Token</a>
+												<a class="nav-link " href="https://lotus.vn/portal/dieu-khoan-token.html">Điều khoản Token</a>
 											</li>
 											<li class="nav-item">
 												<a class="nav-link link-last-mobile" href="https://lotus.vn/w/">Lotus Web</a>
@@ -80,7 +98,7 @@
 									</div>
 								</nav>
 
-								<a href="/portal" class="link-logo-top link-logo-top-r">
+								<a href="https://lotus.vn/portal" class="link-logo-top link-logo-top-r">
 									<img src="images/logo.png" class="logo-lotus">
 								</a>
 								<nav class="navbar navbar-expand-lg navbar-light " style="float: right;margin-right: 0px;width: auto;position: relative;">
@@ -104,45 +122,58 @@
 						<div class="col-sm-4 col-md-3">
 							<div class="main-detail-left">
 								<?php
-									while($row = $result->fetch_assoc()) {
-									 $sql2 = "SELECT * from question WHERE parent_id = ".$row["id"];
-						    		$result2 = $conn->query($sql2);
-								?>	
-								<div class="list-cat-help <?php if($row['id'] == $_GET['parent_id']) echo 'list-cat-help-ac' ?>">
-									<a class="title-cat-help collapsed" data-toggle="collapse" href="#lst-qs<?php echo $row["id"] ?> "><span>
-										<?php echo $row["name"]?>
-									</span></a>
-									<div class="list-link-qs-dt collapse <?php if($row['id'] == $_GET['parent_id']) echo 'show' ?>" id="lst-qs<?php echo $row["id"] ?>">
+								while($row = $result->fetch_assoc()) {
+									$sql2 = "SELECT * from question WHERE parent_id = ".$row["id"];
+									$result2 = $conn->query($sql2);
+									$result4 = $conn->query($sql2);
+									?>	
+									<div class="list-cat-help <?php if($row['id'] == $_GET['parent_id']) echo 'list-cat-help-ac' ?>">
 										<?php
+
+										if (!is_array($result4->fetch_assoc())) {
+											echo '<a class="title-cat-help collapsed" href="?id='.$row["id"].'&parent_id='.$row["id"].'"><span>
+											'.$row["name"].'
+											</span></a>';
+										}
+										else{
+											echo '<a class="title-cat-help collapsed" data-toggle="collapse" href="#lst-qs'.$row["id"].' "><span>
+											'.$row["name"].'
+											</span></a>';
+										}
+										
+										?>
+										
+										<div class="list-link-qs-dt collapse <?php if($row['id'] == $_GET['parent_id']) echo 'show' ?>" id="lst-qs<?php echo $row["id"] ?>">
+											<?php
 											while($row2 = $result2->fetch_assoc()) {
-										?>
-										<a href="?id=<?php echo $row2["id"].'&parent_id='.$row2['parent_id'] ?>" class="link-qs-dt <?php if($row2['id'] == $_GET['id']) echo 'active' ?> "><?php echo $row2["name"] ?></a>
-										<?php
+												?>
+												<a href="?id=<?php echo $row2["id"].'&parent_id='.$row2['parent_id'] ?>" class="link-qs-dt <?php if($row2['id'] == $_GET['id']) echo 'active' ?> "><?php echo $row2["name"] ?></a>
+												<?php
 											}
-										?>
+											?>
+										</div>
 									</div>
-								</div>
-								<?php
-									}
+									<?php
+								}
 								?>
 							</div>
 						</div>
 						<div class="col-sm-8 col-md-9">
 							<div class="main-detail-right">
 								<?php
-									$sql3 = "SELECT * FROM answer WHERE question_id = ".$_GET["id"];
-						    		$result3 = $conn->query($sql3);
-						    		while($row3 = $result3->fetch_assoc()) {
-								?>
-								<div class="title-help-detail"><?php echo $row3["name"]; ?></div>
-								<div class="desc-help-detail">
-									<?php
-										echo $row3["content"];
+								$sql3 = "SELECT * FROM answer WHERE question_id = ".$_GET["id"];
+								$result3 = $conn->query($sql3);
+								while($row3 = $result3->fetch_assoc()) {
 									?>
-								</div>	
-								<?php
+									<div class="title-help-detail"><?php echo $row3["name"]; ?></div>
+									<div class="desc-help-detail">
+										<?php
+										echo $row3["content"];
+										?>
+									</div>	
+									<?php
 
-									}
+								}
 								?>
 							</div>
 						</div>
@@ -155,7 +186,7 @@
 				<div class="container ">
 					<div class="row row-footer">
 						<div class="col-12 col-md-7  col-lg-8  ft-mobile">
-							<a href="#">
+							<a href="https://lotus.vn/portal">
 								<img src="images/logo-footer.png" class="logo-lotus-ft">
 							</a>
 							<span class="sum-ft-lotus ">Lotus là mạng xã hội do người Việt phát triển, lấy nội dung và trải nghiệm người dùng làm trọng tâm.
@@ -163,7 +194,7 @@
 						</div>
 
 						<div class="col-md-7  col-lg-8  pc">
-							<a href="#">
+							<a href="https://lotus.vn/portal">
 								<img src="images/logo-footer.png" class="logo-lotus-ft">
 							</a>
 							<div class="sum-ft-lotus pc">Lotus là mạng xã hội do người Việt phát triển, <br class="d-none d-lg-block">lấy nội dung và trải nghiệm người dùng làm trọng tâm.
