@@ -24,6 +24,8 @@
 		// Check connection
 		if ($conn->connect_error) {
 		    die("Connection failed: " . $conn->connect_error);
+		}else{
+		    mysqli_set_charset($conn, 'UTF8');
 		}
 		
 		$sql = "SELECT * from question where parent_id = 0";
@@ -39,7 +41,7 @@
 					<div class="row">
 						<div class="col-lg-12">
 							<div class="row-head">
-								<a href="home.php" class="link-logo-top link-logo-top-l">
+								<a href="/" class="link-logo-top link-logo-top-l">
 									<img src="images/logo.png" class="logo-lotus">
 								</a>
 								<nav class="navbar navbar-expand-lg navbar-light ">

@@ -25,6 +25,8 @@
 		// Check connection
 		if ($conn->connect_error) {
 		    die("Connection failed: " . $conn->connect_error);
+		}else{
+		    mysqli_set_charset($conn, 'UTF8');
 		}
 		
 		$sql = "SELECT * from question where parent_id = 0";
