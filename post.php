@@ -30,13 +30,6 @@
 	
 	$sql = "SELECT * from question where parent_id = 0";
 	$result = $conn->query($sql);
-
-	$parent = [];
-	$child = [];
-	while($row = $result->fetch_assoc()) {
-		$parent[] = $row;
-	}
-	
 	?>
 	<main>
 		<div class="wrapper">
